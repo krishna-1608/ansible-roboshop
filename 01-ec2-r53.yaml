@@ -7,7 +7,7 @@
     zone_id: "Z07313947YY790RTUIWI"
     domain_name: "krishna.icu"
     # will pass instances through command line
-    # instance:
+    # instances:
     # - mongodb
     # - redis
     # - mysql
@@ -22,7 +22,7 @@
       image_id: "{{ami_id }}"
       tags:
         name: "{{ item }}"
-    loop: "{{ instance }}"
+    loop: "{{ instances }}"
     register: ec2_output
 
   # - name: print the ec2 output
