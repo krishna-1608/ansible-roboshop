@@ -28,13 +28,13 @@
       url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
       dest: /tmp/frontend.zip
 
-  - name: extract catalogue application
+  - name: extract frontend application
     ansible.builtin.unarchive: #unzip file 
       src: /tmp/frontend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
 
-  - name: remove nginx configation
+  - name: delete default nginx conf
     ansible.builtin.file:
       state: absent
       path: /etc/nginx/nginx.conf
