@@ -6,11 +6,12 @@
     sg_id: sg-07e183e8018b9fafa
     zone_id: "Z07313947YY790RTUIWI"
     domain_name: "krishna.icu"
-    instance:
-    - mongodb
-    - redis
-    - mysql
-    - rabbitmq
+    # will pass instances through command line
+    # instance:
+    # - mongodb
+    # - redis
+    # - mysql
+    # - rabbitmq
 
   tasks:
   - name: create ec2 instance
