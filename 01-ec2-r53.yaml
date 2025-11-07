@@ -8,6 +8,7 @@
     domain_name: "krishna.icu"
     instance:
     - mongodb
+    - redis
 
   tasks:
   - name: create ec2 instance
