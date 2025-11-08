@@ -1,0 +1,10 @@
+- name: install nginx
+  hosts: dynamic_frontend
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+
+# ansible-playbook -i frontend.aws_ec2.yaml nginx.yaml
